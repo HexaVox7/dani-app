@@ -28,6 +28,10 @@ app.add_middleware(
 
 memory_db = {"fruits": []}
 
+@app.get("/")
+def read_root():
+    return {"message": "API is running"}
+
 @app.get("/fruits", response_model=Fruits)
 async def get_fruits():
     return Fruits(fruits=memory_db["fruits"])
