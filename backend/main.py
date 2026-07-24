@@ -15,7 +15,7 @@ class Fruits(BaseModel):
 app = FastAPI()
 
 origins = [
-    "https://dani-app-9zlt.onrender.com",
+    "https://dani-app-vert.vercel.app",
     ]
 
 app.add_middleware(
